@@ -1,5 +1,11 @@
 /*jshint unused: vars */
-define(['angular', 'controllers/main']/*deps*/, function (angular, MainCtrl)/*invoke*/ {
+define([
+  'angular',
+  'controllers/main',
+  'directives/dud3',
+  ]/*deps*/, 
+
+function (angular, MainCtrl, Dud3Directive)/*invoke*/ {
   'use strict';
 
   /**
@@ -10,9 +16,11 @@ define(['angular', 'controllers/main']/*deps*/, function (angular, MainCtrl)/*in
    *
    * Main module of the application.
    */
+
   return angular
     .module('rollogApp', [
       'rollogApp.controllers.MainCtrl',
+      'rollogApp.directives.Dud3',
       /*angJSDeps*/
       'ngCookies',
       'ngResource',

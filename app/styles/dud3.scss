@@ -1,0 +1,20 @@
+#d3-wrapper {
+margin-bottom: 175px;
+}
+
+.link {
+ fill: none;
+ stroke: #666;
+ stroke-width: 1.5px;
+}
+
+.node circle {
+ stroke: $yellow;
+ stroke-width: 1.5px;
+}
+
+text {
+ font: 34px sans-serif;
+ pointer-events: none;
+ color: $plum;
+}
