@@ -1,0 +1,59 @@
+/* 
+=================================================
+variables
+=================================================
+*/
+$font: 'Montserrat', sans-serif;
+$red: #BD454A;
+$yellow: #DACC3E;
+$grey: #DAD7CD;
+$plum: #4D484C;
+$green: #A3B18A;
+
+
+/* 
+=================================================
+mixins
+=================================================
+*/
+@mixin large {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: 1025px) and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 569px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (min-width: 321px) and (max-width: 568px) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}

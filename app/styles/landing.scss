@@ -1,0 +1,82 @@
+@import 'config';
+
+.landing-wrapper {
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+
+  .landing-name {
+    float: left;
+    margin-top: 2.5rem;
+
+    @media screen and (max-width: 1024px) {
+      float: none;
+      width: 311px;
+      display: block;
+      text-align: left;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    
+    h1 {
+      font-size: 95px;
+      color: $plum;
+      margin: 0;
+      line-height: 90px;
+
+      &:nth-child(2) {
+        font-weight: normal;
+        color: $red;
+        font-size: 60px;
+      }
+    }
+  }
+  
+  .landing-text {
+    float: right;
+    margin-top: 14.5rem;
+    margin-bottom: 75px;
+
+    @media screen and (max-width: 1024px) {
+      float: none;
+      width: 311px;
+      display: block;
+      text-align: left;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      font-size: 2.1429rem;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    h4 {
+      font-weight: normal;
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+  }
+
+  .coming-soon {
+    p {
+      text-align: center;
+
+      span {
+        color: $red;
+      }
+
+    }
+  }
+
+}
+
