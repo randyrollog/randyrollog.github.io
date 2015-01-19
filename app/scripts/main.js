@@ -10,7 +10,7 @@ require.config({
     'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
-    d3: '../../bower_components/d3/d3'
+    'd3': '../../bower_components/d3/d3'
   },
   shim: {
     angular: {

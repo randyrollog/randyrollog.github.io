@@ -40,7 +40,6 @@ define(['angular'], function (angular) {
           currentGreeting = greeting[2];
         }
 
-
       };
       
       $scope.initGreeting();

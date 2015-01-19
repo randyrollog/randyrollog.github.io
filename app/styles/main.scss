@@ -23,6 +23,11 @@ body {
   max-width: 1170px;
 }
 
+.wide-container {
+  width: 100%;
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -132,3 +137,4 @@ hr {
 
 @import 'landing';
 @import 'dud3';
+@import 'info';

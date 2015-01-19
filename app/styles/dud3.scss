@@ -1,20 +1,62 @@
-#d3-wrapper {
-margin-bottom: 175px;
-}
+@import 'config';
 
-.link {
- fill: none;
- stroke: #666;
- stroke-width: 1.5px;
+#d3-wrapper {
+	margin-bottom: 175px;
 }
 
 .node circle {
- stroke: $yellow;
- stroke-width: 1.5px;
+  fill: $red;
+  // stroke: steelblue;
+  stroke-width: 1.5px;
 }
 
-text {
- font: 34px sans-serif;
- pointer-events: none;
- color: $plum;
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.filter-wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			height: 100px;
+			border-bottom: 3px solid #4D484C;
+			border-left: 3px solid #4D484C;
+			border-radius: 3px;
+			width: 200px;
+			line-height: 100px;
+			margin-left: auto;
+			padding-left: 10px;
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+			font-size: 18px;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&:hover {
+				background: $red;
+				color: white;
+			}
+
+		}
+
+	}
+
 }

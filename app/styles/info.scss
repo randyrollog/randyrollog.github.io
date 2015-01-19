@@ -1,0 +1,37 @@
+@import 'config';
+
+.info-wrapper {
+	width: 75%;
+	margin: 0 auto;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 40px 0;
+			// border-bottom: 1px solid $yellow;
+
+			.info {
+				float: left;
+			}
+
+			.info-header {
+				width: 20%;
+				font-weight: bold;
+			}
+
+			.info-content {
+				width: 80%;
+			}
+
+			p {
+				margin: 0;
+			}
+			
+		}
+
+	}
+
+}
