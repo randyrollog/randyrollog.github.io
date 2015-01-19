@@ -62,6 +62,26 @@ module.exports = function (grunt) {
         ]
       }
     },
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'github.com/randyrollog/randyrollog.github.io.git',
+          branch: 'gh-pages'
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
+      }
+    },
 
     // The actual grunt server settings
     connect: {
@@ -481,7 +501,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+    // 'test',
     'build'
   ]);
 };
