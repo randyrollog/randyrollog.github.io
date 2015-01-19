@@ -71,7 +71,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'github.com/randyrollog/randyrollog.github.io.git',
+          remote: 'git@github.com:randyrollog/randyrollog.github.io.git',
           branch: 'master'
         }
       },
