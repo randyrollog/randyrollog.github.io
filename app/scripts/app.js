@@ -2,10 +2,9 @@
 define([
   'angular',
   'controllers/main',
-  'directives/dud3',
-  ]/*deps*/, 
+  'directives/tree', 'services/tree']/*deps*/, 
 
-function (angular, MainCtrl, Dud3Directive)/*invoke*/ {
+function (angular, MainCtrl, Sundud3Ctrl, Sundud3Directive, TreeDirective, TreeFactory)/*invoke*/ {
   'use strict';
 
   /**
@@ -20,8 +19,9 @@ function (angular, MainCtrl, Dud3Directive)/*invoke*/ {
   return angular
     .module('rollogApp', [
       'rollogApp.controllers.MainCtrl',
-      'rollogApp.directives.Dud3',
-      /*angJSDeps*/
+      'rollogApp.directives.Tree',
+'rollogApp.services.Tree',
+/*angJSDeps*/
       'ngCookies',
       'ngResource',
       'ngSanitize',

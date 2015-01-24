@@ -25,6 +25,7 @@
     "ngRoutes": false,
     "ngSanitize": false,
     "ngCookies": false,
-    "ngResource": false
+    "ngResource": false,
+    "SVG": false
   }
 }

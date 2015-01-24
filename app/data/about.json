@@ -1,6 +1,6 @@
 [
   {
-    "name": "RANDY",
+    "name": "programming",
     "children": [
       {"name": "JavaScript"},
       {"name": "jQuery"},
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "name": "RANDY",
+    "name": "software",
     "children": [
       {"name": "Photoshop"},
       {"name": "Illustrator"},
@@ -27,7 +27,7 @@
     ]
   },
   {
-    "name": "RANDY",
+    "name": "clients",
     "children": [
       {"name": "Unilever"},
       {"name": "Target"},
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "name": "RANDY",
+    "name": "interests",
     "children": [
       {"name": "Sound Design"},
       {"name": "Music Production"},
