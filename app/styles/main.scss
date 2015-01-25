@@ -15,12 +15,14 @@ body {
   font-family: $font;
   color: $plum;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .content-container {
   margin: 0 auto;
   padding: 0 5rem;
   max-width: 1170px;
+  position: relative;
 }
 
 .wide-container {

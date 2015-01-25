@@ -1,10 +1,13 @@
 /*jshint unused: vars */
 define([
   'angular',
-  'controllers/main',
-  'directives/tree', 'services/tree']/*deps*/, 
+  'controllers/main-controller',
+  'controllers/tree',
+  'directives/tree', 
+  'services/tree'
+]/*deps*/, 
 
-function (angular, MainCtrl, Sundud3Ctrl, Sundud3Directive, TreeDirective, TreeFactory)/*invoke*/ {
+function (angular, MainCtrl, TreeCtrl, TreeDirective, TreeFactory)/*invoke*/ {
   'use strict';
 
   /**
@@ -19,9 +22,10 @@ function (angular, MainCtrl, Sundud3Ctrl, Sundud3Directive, TreeDirective, TreeF
   return angular
     .module('rollogApp', [
       'rollogApp.controllers.MainCtrl',
+      'rollogApp.controllers.TreeCtrl',
       'rollogApp.directives.Tree',
-'rollogApp.services.Tree',
-/*angJSDeps*/
+      'rollogApp.services.Tree',
+      /*angJSDeps*/
       'ngCookies',
       'ngResource',
       'ngSanitize',
