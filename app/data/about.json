@@ -8,10 +8,24 @@
       {"name": "BackboneJS"},
       {"name": "NodeJS"},
       {"name": "RequireJS"},
-      {"name": "query"},
-      {"name": "scale"},
-      {"name": "util"},
-      {"name": "vis"}
+      {"name": "GruntJS"},
+      {"name": "GulpJS"},
+      {"name": "VelocityJS"},
+      {"name": "ExpressJS"},
+      {"name": "AJAX"},
+      {"name": "HTML"},
+      {"name": "CSS"},
+      {"name": "SASS"},
+      {"name": "Compass"},
+      {"name": "Twitter Bootstrap"},
+      {"name": "Yeoman"},
+      {"name": "SVG Animations"},
+      {"name": "Ruby on Rails"},
+      {"name": ".NET"},
+      {"name": "PostgreSQL"},
+      {"name": "MongoDB"},
+      {"name": "Responsive Web Design"},
+      {"name": "Mobile Web"}
     ]
   },
   {
@@ -21,7 +35,7 @@
       {"name": "Illustrator"},
       {"name": "InDesign"},
       {"name": "Ableton Live 9"},
-      {"name": "XCode"},
+      {"name": "Xcode"},
       {"name": "iOS Simulator"},
       {"name": "Microsoft Word"}
     ]
@@ -34,11 +48,25 @@
       {"name": "AXE"},
       {"name": "Sam's Club"},
       {"name": "Hot Wheels"},
-      {"name": "physics"},
-      {"name": "query"},
-      {"name": "scale"},
-      {"name": "util"},
-      {"name": "vis"}
+      {"name": "Mattel"},
+      {"name": "Best Foods"},
+      {"name": "Lipton"},
+      {"name": "Dove"},
+      {"name": "T-Mobile"},
+      {"name": "Walmart"},
+      {"name": "Suave"},
+      {"name": "NCAA"},
+      {"name": "Degree"},
+      {"name": "Walgreens"},
+      {"name": "Dollar General"},
+      {"name": "Family Dollar"},
+      {"name": "Tresseme"},
+      {"name": "Clear"},
+      {"name": "Safeway"},
+      {"name": "Rite Aid"},
+      {"name": "Alto Labs"},
+      {"name": "Spade"},
+      {"name": "Raquel Riturban"}
     ]
   },
   {
@@ -47,13 +75,14 @@
       {"name": "Sound Design"},
       {"name": "Music Production"},
       {"name": "Ableton"},
-      {"name": "Synthesis"},
-      {"name": "flex"},
-      {"name": "physics"},
-      {"name": "query"},
-      {"name": "scale"},
-      {"name": "util"},
-      {"name": "vis"}
+      {"name": "Sound Synthesis"},
+      {"name": "Bass"},
+      {"name": "#meandmycronies"},
+      {"name": "Hiking"},
+      {"name": "Live Music"},
+      {"name": "Ramen"},
+      {"name": "CSS Virtuosos"},
+      {"name": "AI taking over mankind"}
     ]
   }
 ]

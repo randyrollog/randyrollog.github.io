@@ -23,7 +23,7 @@ requirejs.config({
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
     svg: '../../bower_components/svg/svg',
-    d3: '../../bower_components/d3/d3'
+    prism: '../../bower_components/prism/prism'
   },
 
     shim: {

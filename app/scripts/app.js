@@ -2,12 +2,12 @@
 define([
   'angular',
   'controllers/main-controller',
-  'controllers/tree',
   'directives/tree', 
+  'directives/editor',
   'services/tree'
-]/*deps*/, 
+  ]/*deps*/, 
 
-function (angular, MainCtrl, TreeCtrl, TreeDirective, TreeFactory)/*invoke*/ {
+function (angular, MainCtrl, TreeDirective, EditorDirective, TreeFactory)/*invoke*/ {
   'use strict';
 
   /**
@@ -22,9 +22,10 @@ function (angular, MainCtrl, TreeCtrl, TreeDirective, TreeFactory)/*invoke*/ {
   return angular
     .module('rollogApp', [
       'rollogApp.controllers.MainCtrl',
-      'rollogApp.controllers.TreeCtrl',
       'rollogApp.directives.Tree',
+      'rollogApp.directives.Editor',
       'rollogApp.services.Tree',
+      
       /*angJSDeps*/
       'ngCookies',
       'ngResource',

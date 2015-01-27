@@ -1,4 +1,4 @@
-define(['angular', 'svg'], function (angular) {
+define(['angular', 'svg', 'prism'], function (angular) {
   'use strict';
 
   /**
@@ -12,9 +12,8 @@ define(['angular', 'svg'], function (angular) {
       return {
         templateUrl: 'templates/tree.html',
         restrict: 'A',
-        link: function() {
+        link: function(scope) {
           
-
           // grab data from service
           var promise = TreeService.getData();
           promise
@@ -48,6 +47,8 @@ define(['angular', 'svg'], function (angular) {
               var self = this;
 
               self.treeData = data;
+              scope.treeData = data;
+              self.open = false;
 
               // init values
               var draw = self.tree,
@@ -107,18 +108,21 @@ define(['angular', 'svg'], function (angular) {
 
               var self = this,
                   draw = self.tree,
-                  treeData = self.treeData;
+                  treeData = self.treeData,
+                  bProgramming = draw.group().attr({'class': 'branch-cateogory'}),
+                  bSoftware = draw.group().attr('class', 'branch-cateogory'),
+                  bClients = draw.group().attr('class', 'branch-cateogory'),
+                  bInterests = draw.group().attr('class', 'branch-cateogory');
 
-              var pText = draw.text(treeData[0].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
-                  sText = draw.text(treeData[1].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
-                  bText = draw.text(treeData[2].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
-                  iText = draw.text(treeData[3].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 });
+              var pText = bProgramming.text(treeData[0].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
+                  sText = bSoftware.text(treeData[1].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
+                  bText = bClients.text(treeData[2].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 }),
+                  iText = bInterests.text(treeData[3].name).opacity(0).font({ family: 'Montserrat', color: '#4D484C', size: '12px', 'font-weight': 200 });
               
-              var htmlIcon = draw.image($window.location.origin + '/images/svg/html.svg').opacity(0),
-                  adobeIcon = draw.image($window.location.origin + '/images/svg/adobe.svg').opacity(0),
-                  pieIcon = draw.image($window.location.origin + '/images/svg/pie.svg').opacity(0),
-                  likesIcon = draw.image($window.location.origin + '/images/svg/likes.svg').opacity(0);
-
+              var htmlIcon = bProgramming.image($window.location.origin + '/images/svg/html.svg').opacity(0),
+                  adobeIcon = bSoftware.image($window.location.origin + '/images/svg/adobe.svg').opacity(0),
+                  pieIcon = bClients.image($window.location.origin + '/images/svg/pie.svg').opacity(0),
+                  likesIcon = bInterests.image($window.location.origin + '/images/svg/likes.svg').opacity(0);
 
               htmlIcon.move(startX + 10, startY + 8 + (horizontal * 0)).animate(700).opacity(1);
               adobeIcon.move(startX + 10, startY + 8 + (horizontal * 1)).animate(700).opacity(1);
@@ -130,44 +134,69 @@ define(['angular', 'svg'], function (angular) {
               bText.move(startX + 35, startY + 10 + (horizontal * 2)).animate(700).opacity(1);
               iText.move(startX + 35, startY + 10 + (horizontal * 3)).animate(700).opacity(1);
 
+              bProgramming.click(function(){
+
+                scope.data = 'programming';
+                scope.$broadcast('setCategory', scope.data);
+
+              });
+
+              bSoftware.click(function(){
+
+                scope.data = 'software';
+                scope.$broadcast('setCategory', scope.data);
+              });
+
+              bClients.click(function(){
+                
+                scope.data = 'clients';
+                scope.$broadcast('setCategory', scope.data);
+              });
+
+              bInterests.click(function(){
+
+                scope.data = 'interests';
+                scope.$broadcast('setCategory', scope.data);
+              });
+
               // pText.click(function(){
 
               //   self.openBranchTwo();
 
               // });
 
-            },
+            }//,
 
-            openBranchTwo: function() {
-              var self = this,
-                  draw = self.tree;//,
-                  // treeData = self.treeData;//,
-                  // b2 = self.initData.branchTwo,
-                  // hDistance = self.initData.branchTwo.distance;
+            // openBranchTwo: function() {
+            //   var self = this,
+            //       draw = self.tree;//,
+            //       // treeData = self.treeData;//,
+            //       // b2 = self.initData.branchTwo,
+            //       // hDistance = self.initData.branchTwo.distance;
 
-              // var dataLength = treeData[0].children.length;
+            //   // var dataLength = treeData[0].children.length;
 
-              var vLineTwo = draw.polyline([[115, 160]]).fill('none').stroke({ width: 3, color: '#4D484C' });
-              vLineTwo.animate(150, '>').plot([[120, 160], [120, 200]]);
+            //   var vLineTwo = draw.polyline([[115, 160]]).fill('none').stroke({ width: 3, color: '#4D484C' });
+            //   vLineTwo.animate(150, '>').plot([[120, 160], [120, 200]]);
 
-              var hLineOne = draw.polyline([[120, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
-              hLineOne.animate(150, '>', 150).plot([[120, 200], [200, 200]]);
+            //   var hLineOne = draw.polyline([[120, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
+            //   hLineOne.animate(150, '>', 150).plot([[120, 200], [200, 200]]);
 
-              var vLineThree = draw.polyline([[200, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
-              vLineThree.animate(150, '>', 300).plot([[200, 200], [200, 460]]);
+            //   var vLineThree = draw.polyline([[200, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
+            //   vLineThree.animate(150, '>', 300).plot([[200, 200], [200, 460]]);
 
-              var vLineFour = draw.polyline([[200, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
-              vLineFour.animate(150, '>', 300).plot([[200, 200], [200, 0]]);
+            //   var vLineFour = draw.polyline([[200, 200]]).fill('none').stroke({ width: 3, color: '#4D484C' });
+            //   vLineFour.animate(150, '>', 300).plot([[200, 200], [200, 0]]);
 
-              var totalLength = 460;
+            //   var totalLength = 460;
 
-              for(var i = 0, len = self.treeData[0].children.length; i < len; i++) {
-                var hLine = draw.polyline([[200, (totalLength/len) * (i+1)]]).fill('none').stroke({ width: 3, color: '#4D484C' });
-                hLine.animate(300, '>', 400).plot([[200, (totalLength/len) * (i+1)], [280, (totalLength/len) * (i+1) ]]);
-              }
+            //   for(var i = 0, len = self.treeData[0].children.length; i < len; i++) {
+            //     var hLine = draw.polyline([[200, (totalLength/len) * (i+1)]]).fill('none').stroke({ width: 3, color: '#4D484C' });
+            //     hLine.animate(300, '>', 400).plot([[200, (totalLength/len) * (i+1)], [280, (totalLength/len) * (i+1) ]]);
+            //   }
 
 
-            }
+            // }
 
           };
           

@@ -10,8 +10,9 @@ define(['angular'], function (angular) {
    */
 
   angular.module('rollogApp.controllers.MainCtrl', [])
-    .controller('MainCtrl', function ($scope) {
+    .controller('MainCtrl', function ($scope, $rootScope, TreeService) {
 
+      // greet the viewer
       var date = new Date(),
           currentHour = date.getHours(),
           currentGreeting,
@@ -45,6 +46,14 @@ define(['angular'], function (angular) {
       $scope.initGreeting();
 
       $scope.currentGreeting = currentGreeting;
-    
+
+
+      // grab data from service
+      var promise = TreeService.getData();
+      promise
+        .then(function(resp){
+          $scope.treeData = resp;
+        });
+      
     });
 });
