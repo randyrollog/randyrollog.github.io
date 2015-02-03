@@ -11,7 +11,10 @@ require.config({
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
     svg: '../../bower_components/svg/svg',
-    prism: '../../bower_components/prism/prism'
+    prism: '../../bower_components/prism/prism',
+    velocity: '../../bower_components/velocity/velocity',
+    'angular-scroll': '../../bower_components/angular-scroll/angular-scroll',
+    'velocity.ui': '../../bower_components/velocity/velocity.ui'
   },
   shim: {
     angular: {

@@ -41,7 +41,6 @@ define(['angular', 'prism'], function (angular) {
 
               scope.category = name;
               scope.highlightPrism();
-              // scope.highlight();
 
             }
 
@@ -74,7 +73,7 @@ define(['angular', 'prism'], function (angular) {
               }
               /* jshint ignore:end */
 
-            }, 100);
+            }, 200);
 
 
 

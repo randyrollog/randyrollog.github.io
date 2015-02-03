@@ -1,0 +1,14 @@
+@import 'config';
+
+.m-tree-wrapper {
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+	
+}
+
+.mtree-content {
+	text-align: center;
+}

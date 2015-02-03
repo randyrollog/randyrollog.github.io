@@ -1,4 +1,4 @@
-define(['angular'], function (angular) {
+define(['angular', 'velocity'], function (angular, Velocity) {
   'use strict';
 
   /**
@@ -10,7 +10,7 @@ define(['angular'], function (angular) {
    */
 
   angular.module('rollogApp.controllers.MainCtrl', [])
-    .controller('MainCtrl', function ($scope, $rootScope, TreeService) {
+    .controller('MainCtrl', function ($scope, $rootScope, TreeService, $window) {
 
       // greet the viewer
       var date = new Date(),
@@ -42,11 +42,21 @@ define(['angular'], function (angular) {
         }
 
       };
+
+      $scope.navArrow = function() {
+        var width = $window.innerWidth;
+            
+        var offset = width >= 768 ? -50 : -10,
+            dur = width >= 768 ? 375 : 520,
+            treeId = width >= 768 ? document.getElementById('nav-tree') : document.getElementById('m-nav-tree');
+
+        Velocity.animate(treeId, 'scroll', { duration: dur, offset: offset, easing: 'easeInOutCubic' });
+
+      };
       
       $scope.initGreeting();
 
       $scope.currentGreeting = currentGreeting;
-
 
       // grab data from service
       var promise = TreeService.getData();

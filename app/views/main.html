@@ -1,9 +1,8 @@
-<div class="content-container">
+<!-- landing -->
+<section class="landing-wrapper">
+  <div class="content-container">
+    <!-- <div ng-include="'views/navbar.html'"></div> -->
 
-  <div ng-include="'views/navbar.html'"></div>
-
-  <div class="landing-wrapper">
-    
     <div class="landing-name">
       <h1>
         randy<br>
@@ -20,54 +19,62 @@
       
       <h4>
         i'm randy, an interactive developer
-        with a taste for design based in<br>
-        los angeles, ca.
+        with a taste for design based in
+        los angeles, california.
       </h4>
     </div>
 
     <div class='clearfix'></div>
-
-    <div class="info-wrapper">
-      <ul>
-        <li>
-          
-          <div class="info info-header">
-            <p>profile:</p>
-          </div>
-
-          <div class="info info-content">
-            <p>
-              i'm a developer, musician &amp; designer who loves all things creative &amp; tech. i spend most of my free time
-              making tunes, but enjoy a nice netflix binge from time to time. when i'm not doing that, i love keeping
-              up with the latest in web technologies and figuring out new tricks to apply to my everyday code.
-              i specialize in front end development, but have done plenty of full stack applications. new
-              challenges make my job fun, and fun === life.
-            </p>
-          </div>
-          <div class='clearfix'></div>
-        </li>
-
-        <li>
-          <div class="info info-header">
-            <p>contact:</p>
-          </div>
-
-          <div class="info info-content">
-            <p>
-              hi@randyrollog.com<br>
-              <a href="tel:3106213051">310-621-3051</a><br>
-              los angeles, ca
-            </p>
-          </div>
-
-          <div class='clearfix'></div>
-        </li>
-      </ul>
-    </div>
+    
+    <svg version="1.1" ng-click="navArrow()" id="nav-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="35px" height="45px" viewBox="29.803 27.5 35 45" enable-background="new 29.803 27.5 35 45" xml:space="preserve">
+      <g>
+        <polygon fill="#BD454A" class="poly poly-3" points="58.538,53.977 47.303,65.212 36.067,53.977 37.317,52.726 47.303,62.711 57.288,52.726"/>
+        <polygon fill="#BD454A" class="poly poly-2" points="58.538,45.007 47.303,56.243 36.067,45.007 37.317,43.757 47.303,53.742 57.288,43.757"/>
+        <polygon fill="#BD454A" class="poly poly-1" points="58.538,36.039 47.303,47.274 36.067,36.039 37.317,34.788 47.303,44.773 57.288,34.788"/>
+      </g>
+    </svg>
 
   </div>
 
-  <div class="tree-wrapper">
+</section>
+
+<!-- works -->
+<!-- <div class="works-wrapper" ng-controller="WorkCtrl">
+  <div class="content-container">
+    <h1>Works</h1>
+
+    <div id="cbp-pgcontainer" class="cbp-pgcontainer">
+      <ul class="cbp-pggrid" >
+        
+        <li ng-repeat="work in works">
+          
+          <a ng-href="#/works/{{work.path}}">
+              <div class="cbp-pgcontent">
+                <div class="cbp-pgitem">
+                  <div class="cbp-pgitem-flip">
+                    <img ng-src="images/{{ work.image }}" />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="cbp-pginfo">
+                <h3>{{ work.title }}</h3>
+                <p class="cbp-pgprice">{{ work.type }}</p>
+              </div>
+            </a>
+
+        </li>
+
+      </ul>
+  </div>
+
+  </div>
+</div> -->
+
+<!-- tree -->
+<div class="content-container">
+  <div id="nav-tree" class="tree-wrapper">
     
     <div class="tree-gui">
       <span class="control"></span>
@@ -75,8 +82,7 @@
       <span class="control"></span>
       
       <div class="column file-section">
-        <h2>FOLDERS</h2>
-        
+
         <div id="tree-wrapper" tree></div>
 
       </div>
@@ -88,12 +94,51 @@
   </div>
 
   <div class='clearfix'></div>
-
 </div>
 
-<!-- <div class="wide-container">
-  
-</div> -->
+<!-- mobile tree -->
+<div id="m-nav-tree" class="m-tree-wrapper">
+  <div class="content-container mtree-content">
 
+   <img src="images/svg/mobile-tree.svg" alt="skills list">
 
+  </div>
+</div>
 
+<!-- info -->
+<div class="info-wrapper">
+  <div class="content-container">
+    <ul>
+      <li>
+        <div class="info info-header">
+          <p>profile:</p>
+        </div>
+
+        <div class="info info-content">
+          <p>
+            i'm a developer, designer &amp; trackmaker who loves all things creative. i spend most of my free time
+            <a href="//soundcloud.com/croniesmusic" target="_blank" class="stuff">making stuff</a>, but enjoy a nice netflix binge from time to time. when i'm not doing that, i'm keeping
+            up with the latest in web technologies and applying them to my everyday practice. i specialize in front 
+            end development, but have done plenty of full stack applications. new challenges make my job fun, so let's
+            make some fun.
+          </p>
+        </div>
+        <div class='clearfix'></div>
+      </li>
+
+      <li>
+        <div class="info info-header">
+          <p>S/O:</p>
+        </div>
+
+        <div class="info info-content">
+          <p>
+            <span class="email" ng-click="clickCopy($event)">hi@randyrollog.com</span> <span>&bull;</span> <a href="//github.com/randyrollog" target="_blank">github</a> <span>&bull;</span> <a href="//linkedin.com/in/randyrollog/" target="_blank">linkedin</a>
+          </p>
+        </div>
+
+        <div class='clearfix'></div>
+      </li>
+    </ul>
+  </div>
+</div>
